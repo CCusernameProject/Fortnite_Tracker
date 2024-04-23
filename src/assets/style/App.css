@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+#root {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(4, 0, 65, 0.603);
+}
+
+#component {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0);
+}
+
+.Form {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PseudoEntry {
+    width: 650px;
+    height: 60px;
+    padding-left: 25px;
+    background-color: #2C2C2C;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    color: white;
+    font-size: 25px;
+    line-height: 0;
+}
+
+.PseudoEntry::placeholder {
+    color: white;
+    font-size: 25px;
+    line-height: 0;
+}
+
+.PseudoEntry:focus {
+    outline: none;
+}
+
+.Submit-Design {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9c81ff;
+    height: 60px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 80px;
+}
+
+.Submit-Design button {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    border: none;
+    opacity: 0;
+}
+
+.Submit-Design button:hover {
+    cursor: pointer;
+}
+
+.Info {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.CardWin {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CardWin p {
+    font-size: 40px;
+}
