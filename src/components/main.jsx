@@ -8,6 +8,8 @@ const MainComponent = () => {
     const [winsRankedSeason, setWinsRankedSeason] = useState(0)
     const [killRankedSeason, setKillRankedSeason] = useState(0)
     const [ratioSeason, setRatioSeason] = useState(0)
+    const [deathSeason, setDeathSeason] = useState(0)
+    const [matchesSeason, setMatchesSeason] = useState(0)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -18,6 +20,8 @@ const MainComponent = () => {
             setWinsRankedSeason(data.data.stats.keyboardMouse.ltm.wins)
             let rs = (data.data.stats.keyboardMouse.overall.kills / data.data.stats.keyboardMouse.overall.matches)
             setRatioSeason(rs.toFixed(2))
+            setDeathSeason(data.data.stats.keyboardMouse.overall.deaths)
+            setMatchesSeason(data.data.stats.keyboardMouse.overall.matches)
         })
     };
 
@@ -57,6 +61,16 @@ const MainComponent = () => {
                 <div className='CardWin'>
                     <h1>Total Kill Per Game</h1>
                     <p>{ratioSeason}</p>
+                </div>
+            </div>
+            <div className='Info'>
+                <div className='CardWin'>
+                    <h1>Total Season Deaths</h1>
+                    <p>{deathSeason}</p>
+                </div>
+                <div className='CardWin'>
+                    <h1>Total Season Matches</h1>
+                    <p>{matchesSeason}</p>
                 </div>
             </div>
         </main>
